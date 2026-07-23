@@ -7,9 +7,5 @@ class Solution:
         for i in g:
             f[i]=f.get(i,0)+1
             # print(f)
-        l=[]
-        for k,v in f.items():
-            if v==1:
-                l.append(k)
-        return(l)
+        return[k for k,v in f.items() if v==1]
 
