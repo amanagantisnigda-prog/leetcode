@@ -6,5 +6,22 @@ class Solution:
         #         break
         # else:
         #     return False
-        n=int(num**0.5)
-        return n*n==num
+        
+        
+        # n=int(num**0.5)
+        # return n*n==num
+
+        left, right = 1, num
+
+        while left <= right:
+            mid = (left + right) // 2
+            square = mid * mid
+
+            if square == num:
+                return True
+            elif square < num:
+                left = mid + 1
+            else:
+                right = mid - 1
+
+        return False
